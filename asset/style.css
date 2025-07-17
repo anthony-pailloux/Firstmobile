@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* ------------CSS HEADER------------- */
+header {
+    padding: 10%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+/* --------------CSS MAIN--------------- */
+section {
+    margin: 5% 20% 2% 20%;
+    padding: 7% 10%;
+    background-color: #CACACA;
+    border-radius: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ---------CONTAINER IMAGE---------- */
+/* --------DISPLAY NONE désactive en vue mobile--------- */
+.imageProfile {
+    width: 50px;
+    display: none;
+}
+/* -------------IMAGE DU CONTAINER .imageProfile-------- */
+/* --------DISPLAY NONE désactive en vue mobile--------- */
+img {
+    width: 100%;
+}
+/* --------désactiver en vue mobile--------- */
+p {
+    display: none;
+}
+
+h2 {
+    font-size: 35px;
+}
+/* ---------Réglages du lien ----------- */
+.containerButton {
+    padding: 3% 18%;
+    background-color: #AF4C0F;
+    border-radius: 60px;
+}
+
+a {
+    
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+}
+
+/* -----------FOOTER----------- */
+footer {
+    
+    padding: 5%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+/* ----------mediaqueris vue tablette------- */
+@media (min-width: 600px) and (max-width:1023px)
+    {
+        body {
+            background-color: #CACACA;
+         
+        }
+    main {
+        display: flex;
+        flex-wrap:wrap;
+    }
+
+    section {
+        padding: 7% 4%;
+        margin: 15px;
+        width: 20%;
+        background-color: white;
+        border-radius: 60px;
+        border: solid black;
+        position: relative;
+        flex-wrap: wrap;
+
+    }
+
+    h2{
+        text-transform: lowercase;
+    }
+
+    p {
+      display: block;
+      width: 100%;
+        
+    }
+    .containerButton {
+    padding: 2% 3%;
+    background-color: black;
+    border-radius: 15px;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-70% , -90%);
+}
+
+    a {
+    font-size: 25px;
+}
+
+
+
+    }
