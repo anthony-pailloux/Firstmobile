@@ -1,116 +1,223 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
-/* ------------CSS HEADER------------- */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------------ CSS HEADER — mobile ------------- */
 header {
-    padding: 10%;
+    padding: 8% 5%;
     background-color: black;
     color: white;
     text-align: center;
 }
-/* --------------CSS MAIN--------------- */
+
+header h1 {
+    font-size: 2rem;
+}
+
+header p {
+    display: none;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ffddd2;
+}
+
+/* -------------- CSS MAIN — mobile --------------- */
+main {
+    flex: 1;
+}
+
 section {
-    margin: 5% 20% 2% 20%;
-    padding: 7% 10%;
-    background-color: #CACACA;
+    margin: 5% 8%;
+    padding: 6% 8%;
+    background-color: #cacaca;
     border-radius: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-/* ---------CONTAINER IMAGE---------- */
-/* --------DISPLAY NONE désactive en vue mobile--------- */
+
 .imageProfile {
     width: 50px;
     display: none;
+    flex-shrink: 0;
 }
-/* -------------IMAGE DU CONTAINER .imageProfile-------- */
-/* --------DISPLAY NONE désactive en vue mobile--------- */
+
 img {
     width: 100%;
+    border-radius: 50%;
 }
-/* --------désactiver en vue mobile--------- */
+
 p {
     display: none;
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 1.6rem;
 }
-/* ---------Réglages du lien ----------- */
+
 .containerButton {
-    padding: 3% 18%;
-    background-color: #AF4C0F;
+    padding: 12px 28px;
+    background-color: #af4c0f;
     border-radius: 60px;
+    flex-shrink: 0;
 }
 
 a {
-    
     text-decoration: none;
     color: white;
-    font-size: 35px;
+    font-size: 1.2rem;
 }
 
-/* -----------FOOTER----------- */
+/* ----------- FOOTER — mobile ----------- */
 footer {
-    
     padding: 5%;
     background-color: black;
     color: white;
     text-align: center;
-    font-size: 50px;
+    font-size: 0.9rem;
 }
-/* ----------mediaqueris vue tablette------- */
-@media (min-width: 600px) and (max-width:1023px)
-    {
-        body {
-            background-color: #CACACA;
-         
-        }
+
+/* ---------- media queries — tablette ------- */
+@media (min-width: 600px) and (max-width: 1023px) {
+    body {
+        background-color: #cacaca;
+    }
+
+    header p {
+        display: block;
+    }
+
     main {
         display: flex;
-        flex-wrap:wrap;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px 10px;
     }
 
     section {
         padding: 7% 4%;
         margin: 15px;
-        width: 20%;
+        width: 28%;
         background-color: white;
         border-radius: 60px;
         border: solid black;
         position: relative;
         flex-wrap: wrap;
-
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 
-    h2{
+    .imageProfile {
+        display: block;
+        width: 45px;
+    }
+
+    h2 {
         text-transform: lowercase;
+        font-size: 1.4rem;
     }
 
     p {
-      display: block;
-      width: 100%;
-        
+        display: block;
+        width: 100%;
+        font-size: 0.85rem;
+        line-height: 1.4;
     }
+
     .containerButton {
-    padding: 2% 3%;
-    background-color: black;
-    border-radius: 15px;
-    position: absolute;
-    top: 100%;
-    left: 100%;
-    transform: translate(-70% , -90%);
-}
+        padding: 8px 14px;
+        background-color: black;
+        border-radius: 15px;
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        transform: translate(-70%, -90%);
+    }
 
     a {
-    font-size: 25px;
+        font-size: 1rem;
+    }
 }
 
-
-
+/* ---------- media queries — desktop ------- */
+@media (min-width: 1024px) {
+    body {
+        background-color: #e8f6f3;
     }
+
+    header {
+        padding: 40px 20px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        display: block;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    section {
+        margin: 0;
+        padding: 30px 20px;
+        background-color: white;
+        border-radius: 20px;
+        border: 2px solid #1a535c;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .imageProfile {
+        display: block;
+        width: 70px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        color: #1a535c;
+    }
+
+    p {
+        display: block;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #3d6b7a;
+    }
+
+    .containerButton {
+        padding: 10px 24px;
+        background-color: #af4c0f;
+        border-radius: 30px;
+        margin-top: 5px;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 20px;
+    }
+}
